@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { ArrowDown, Database, Terminal, Code2, Layers, Server, Cpu } from 'lucide-react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { useEffect } from 'react';
@@ -91,15 +92,21 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6, duration: 0.8 }}
             style={{ marginTop: '1.5rem', maxWidth: '550px', fontSize: '1.25rem', color: 'var(--text-muted)', lineHeight: '1.8' }}
           >
-            Crafting scalable web applications and robust database architectures with modern technologies and a passion for dark-mode cyberpunk design.
+           I am a highly skilled and motivated individual with a strong educational
+background. My expertise includes a wide range of technical skills such as
+SQL, HTML, CSS, JavaScript, Bootstrap, Python, Django, Oracle SQL,
+Microsoft SQL Server, MVC Entity Framework, C# MVC, PL SQL, React JS,
+and PostgreSQL. I have a proven track record of successfully developing and
+implementing various projects using these technologies. 
+
           </motion.p>
           
           <motion.div 
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8, duration: 0.8 }}
             style={{ marginTop: '3rem', display: 'flex', flexWrap: 'wrap', gap: '1.5rem' }}
           >
-             <a href="/projects" style={{ background: 'var(--neon-cyan)', color: 'black', padding: '1rem 2.5rem', borderRadius: '0.5rem', fontWeight: 800, fontSize: '1.1rem', boxShadow: 'var(--glow-cyan)', transition: 'all 0.3s', textTransform: 'uppercase' }} onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-3px)'; }} onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; }}>View Projects</a>
-             <a href="/contact" style={{ background: 'transparent', color: 'var(--text-color)', border: '2px solid var(--border-color)', padding: '1rem 2.5rem', borderRadius: '0.5rem', fontWeight: 800, fontSize: '1.1rem', transition: 'all 0.3s', textTransform: 'uppercase' }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'var(--neon-pink)'; e.currentTarget.style.color = 'var(--neon-pink)'; e.currentTarget.style.boxShadow = 'var(--glow-pink)'; e.currentTarget.style.transform = 'translateY(-3px)'; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--border-color)'; e.currentTarget.style.color = 'var(--text-color)'; e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.transform = 'translateY(0)'; }}>Let's Talk</a>
+             <Link to="/projects" style={{ background: 'var(--neon-cyan)', color: 'black', padding: '1rem 2.5rem', borderRadius: '0.5rem', fontWeight: 800, fontSize: '1.1rem', boxShadow: 'var(--glow-cyan)', transition: 'all 0.3s', textTransform: 'uppercase' }} onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-3px)'; }} onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; }}>View Projects</Link>
+             <Link to="/contact" style={{ background: 'transparent', color: 'var(--text-color)', border: '2px solid var(--border-color)', padding: '1rem 2.5rem', borderRadius: '0.5rem', fontWeight: 800, fontSize: '1.1rem', transition: 'all 0.3s', textTransform: 'uppercase' }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'var(--neon-pink)'; e.currentTarget.style.color = 'var(--neon-pink)'; e.currentTarget.style.boxShadow = 'var(--glow-pink)'; e.currentTarget.style.transform = 'translateY(-3px)'; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--border-color)'; e.currentTarget.style.color = 'var(--text-color)'; e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.transform = 'translateY(0)'; }}>Let's Talk</Link>
           </motion.div>
         </div>
 

@@ -109,6 +109,13 @@ h1, h2, h3, h4, h5, h6 {
   grid-auto-flow: dense;
 }
 
+@media (max-width: 900px) {
+  .bento-grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .bento-card {
   background: var(--card-bg);
   border-radius: 1.5rem;

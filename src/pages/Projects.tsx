@@ -68,7 +68,7 @@ export const Projects = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        style={{ display: 'grid', gridTemplateColumns: 'repeat(12, 1fr)', gap: '1.5rem' }}
+        className="bento-grid"
       >
         {projects.map((project, index) => {
           // Compute grid classes based on size prop for bento feel
@@ -113,7 +113,7 @@ export const Projects = () => {
                 </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: isWide ? '1fr 1fr' : '1fr', gap: '1rem', borderTop: '1px solid var(--border-color)', paddingTop: '1.5rem' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', borderTop: '1px solid var(--border-color)', paddingTop: '1.5rem' }}>
                 {project.highlights.map((highlight, i) => (
                   <div key={i} style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
                     <div style={{ color: project.neonColor }}>

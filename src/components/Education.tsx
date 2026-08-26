@@ -3,9 +3,9 @@ import { GraduationCap, Award, BookOpen } from 'lucide-react';
 
 export const Education = () => {
   const eduData = [
-    { title: "B.E. ECE", school: "Paavai Engineering College", year: "2019 — 2023", score: "78%", color: "var(--neon-cyan)", icon: <GraduationCap size={32} /> },
-    { title: "HSC", school: "Kurinjy Higher Secondary School", year: "2018 — 2019", score: "52%", color: "var(--neon-pink)", icon: <Award size={32} /> },
-    { title: "SSLC", school: "P.A Vidhya Bhavan Hr Sec School", year: "2016 — 2017", score: "85%", color: "var(--neon-volt)", icon: <BookOpen size={32} /> }
+    { title: "B.C.A", school: "Nadha Arts and Science  College", year: "2019 — 2022", score: "78%", color: "var(--neon-cyan)", icon: <GraduationCap size={32} /> },
+    { title: "HSC", school: "Model School Mathur", year: "2018 — 2019", score: "52%", color: "var(--neon-pink)", icon: <Award size={32} /> },
+    { title: "SSLC", school: "Model school mathur", year: "2017 ", score: "85%", color: "var(--neon-volt)", icon: <BookOpen size={32} /> }
   ];
 
   return (
