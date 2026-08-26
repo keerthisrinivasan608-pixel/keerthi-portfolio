@@ -106,9 +106,9 @@ export const Navbar = () => {
             style={{
               position: 'fixed',
               top: '5.5rem',
-              left: '50%',
-              transform: 'translateX(-50%)',
-              width: '90%',
+              left: '1rem',
+              right: '1rem',
+              margin: '0 auto',
               maxWidth: '400px',
               background: 'rgba(15, 15, 15, 0.95)',
               backdropFilter: 'blur(20px)',
