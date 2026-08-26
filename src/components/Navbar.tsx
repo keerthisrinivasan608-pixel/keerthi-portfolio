@@ -36,7 +36,7 @@ export const Navbar = () => {
           boxShadow: '0 10px 40px -10px rgba(0,0,0,0.8)'
         }}>
           <Link to="/" style={{ fontSize: '1.5rem', fontWeight: 900, color: 'var(--text-color)', letterSpacing: '-0.05em' }}>
-            KS<span style={{ color: 'var(--neon-cyan)' }}>_</span>
+            KEERTHI S<span style={{ color: 'var(--neon-cyan)' }}></span>
           </Link>
           
           {/* Desktop Menu */}
