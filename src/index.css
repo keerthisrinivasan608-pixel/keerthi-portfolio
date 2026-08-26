@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  /* Dark Mode Core */
+  --bg-color: #050505; 
+  --card-bg: #111111;
+  --card-hover: #161616;
+  --border-color: #222222;
+  
+  /* Typography */
+  --text-color: #f8fafc;
+  --text-muted: #94a3b8;
+  --font-main: 'Outfit', sans-serif;
+  
+  /* Neon Accents */
+  --neon-cyan: #06b6d4;
+  --neon-pink: #ec4899;
+  --neon-volt: #84cc16;
+  --neon-purple: #8b5cf6;
+  --highlight-color: var(--neon-cyan);
+  --secondary-color: var(--neon-pink);
+  
+  /* Shadows & Glows */
+  --glow-cyan: 0 0 20px rgba(6, 182, 212, 0.4);
+  --glow-pink: 0 0 20px rgba(236, 72, 153, 0.4);
+  --shadow-bento: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--bg-color);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  color: var(--text-color);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  font-size: 16px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--neon-cyan);
+  color: #000;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* Layout Utilities */
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 8rem 0;
+}
+
+/* Typography Utilities */
+.section-title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 900;
+  margin-bottom: 4rem;
+  letter-spacing: -0.04em;
+  color: var(--text-color);
+}
+
+.massive-text {
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  color: var(--text-color);
+}
+
+.outline-text {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--text-color);
+  transition: all 0.4s ease;
+}
+
+.outline-text:hover {
+  color: var(--neon-cyan);
+  -webkit-text-stroke: 0px transparent;
+  text-shadow: var(--glow-cyan);
+}
+
+/* Bento Grid System */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+  grid-auto-flow: dense;
+}
+
+.bento-card {
+  background: var(--card-bg);
+  border-radius: 1.5rem;
+  border: 1px solid var(--border-color);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-bento);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.bento-card:hover {
+  background: var(--card-hover);
+  border-color: rgba(255,255,255,0.15);
+  transform: translateY(-4px);
+}
+
+/* Badge / Tags */
+.badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(255,255,255,0.05);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.badge:hover {
+  background: var(--neon-cyan);
+  color: #000;
+  border-color: var(--neon-cyan);
+  box-shadow: var(--glow-cyan);
+}
+
+/* Base grids for non-bento legacy structures */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
